@@ -17,10 +17,13 @@
 </div>
 <div class="grid-btn">
     <button type="button" disabled="@_disabled"
-            class="btn btn-warning btn-lg hg-font" 
+            class="btn btn-warning btn-lg hg-font fixed-button"
             onclick="@GetJokeAsync">
-        Hey, Chuck?!
+        Kick Chuck?!
     </button>
+    <div class="thanks">
+        Special thanks to our friends at <a href="http://www.icndb.com/" target="_blank">ICNDB</a> and <a href="http://tobiasahlin.com/spinkit/" target="_blank">SpinKit by Tobias Ahlin</a>!
+    </div>
 </div>
 
 @functions {
@@ -32,18 +35,8 @@
 
     private async Task GetJokeAsync() {
         _isLoading = true;
-        await Task.Delay(350); // Emulate load times...
+        await Task.Delay(250); // Emulate load times...
         _joke = await Http.GetJsonAsync<Result>("http://api.icndb.com/jokes/random?limitTo=[nerdy]");
         _isLoading = false;
-    }
-
-    public class Result {
-        public string type { get; set; }
-        public Value value { get; set; }
-    }
-
-    public class Value {
-        public int id { get; set; }
-        public string joke { get; set; }
     }
 }

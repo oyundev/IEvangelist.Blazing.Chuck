@@ -64,9 +64,18 @@ app {
     align-content: center;
 }
 
+.fixed-button {
+    min-width: 420px;
+}
+
 .grid-btn {
     grid-area: btn;
     align-content: center;
+}
+
+.thanks {
+    padding: 20px;
+    opacity: .7;
 }
 
 .spinner {
