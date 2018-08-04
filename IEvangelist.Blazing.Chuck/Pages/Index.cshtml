@@ -1,6 +1,10 @@
 ﻿@page "/"
 @inject HttpClient Http
 
+<a href="https://github.com/IEvangelist/IEvangelist.Blazing.Chuck">
+    <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
+</a>
+
 <div class="grid-center">    
     <img class="center glow @((_isLoading ? "shaking" : ""))" src="/img/chuck-norris.png" />
 </div>
@@ -25,7 +29,9 @@
         Special thanks to our friends at <a href="http://www.icndb.com/" target="_blank">ICNDB</a> and <a href="http://tobiasahlin.com/spinkit/" target="_blank">SpinKit by Tobias Ahlin</a>!
     </div>
     <div>
-        <code><pre style="color: azure !important;">Debug: Shift + Alt + D</pre></code>
+        <code>
+            <pre style="color: azure !important;">Debug: Shift + Alt + D</pre>
+        </code>
     </div>
 </div>
 
@@ -38,8 +44,7 @@
 
     private async Task GetJokeAsync() {
         _isLoading = true;
-        await Task.Delay(250); // Emulate load times...
-        _joke = await Http.GetJsonAsync<Result>("http://api.icndb.com/jokes/random?limitTo=[nerdy]");
+        _joke = await Http.GetJsonAsync<Result>("https://api.icndb.com/jokes/random?limitTo=[nerdy]");
         _isLoading = false;
     }
 }
