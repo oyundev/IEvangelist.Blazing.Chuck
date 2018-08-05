@@ -2,7 +2,7 @@
 @inject HttpClient Http
 
 <div class="grid-center">    
-    <img class="center glow @((_isLoading ? "shaking" : ""))" src="/img/chuck-norris.png" />
+    <img id="chuck" class="center glow @((_isLoading ? "shaking" : ""))" src="/img/chuck-norris.png" />
 </div>
 
 <div class="grid-joke">
@@ -24,7 +24,7 @@
     <div class="thanks">
         Special thanks to our friends at <a href="http://www.icndb.com/" target="_blank">ICNDB</a> and <a href="http://tobiasahlin.com/spinkit/" target="_blank">SpinKit by Tobias Ahlin</a>!
     </div>
-    <div>
+    <div class="">
         <code>
             <pre style="color: azure !important;">Debug: Shift + Alt + D</pre>
         </code>
