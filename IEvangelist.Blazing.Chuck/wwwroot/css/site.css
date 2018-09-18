@@ -63,6 +63,19 @@ html, body {
     opacity: .7;
 }
 
+@media(max-width:1280px) {
+    #gitlink {
+        display: none;
+    }
+}
+
+
+@media(max-width:768px) {
+    #gitlink {
+        display: none;
+    }
+}
+
 .spinner {
     margin: 100px auto;
     width: 100px;
@@ -121,7 +134,6 @@ html, body {
         -webkit-transform: scaleY(1.0);
     }
 }
-
 
 .shaking {
     animation: shake 1.77s cubic-bezier(.36,.07,.19,.97) infinite;
@@ -347,6 +359,10 @@ html, body {
     #chuck {
         max-width: 260px;
     }
+    
+    #gitlink {
+        display: none;
+    }
 
     .grid-content {
         grid-template-areas: 
@@ -356,6 +372,14 @@ html, body {
 }
 
 @media only screen and (max-width : 768px) {
+    img {
+        width: 400px;
+    }
+
+    .hg-font {
+        font-size: 2rem;
+    }
+    
     .grid-center {
         padding-top: 300px;
     }
@@ -368,9 +392,23 @@ html, body {
         max-width: 440px;
     }
 
+    #gitlink {
+        display: none;
+    }
+
     .grid-content {
         grid-template-areas: 
             '. center center center .'
             '. joke joke joke btn';
+    }
+}
+
+@media only screen and (max-width : 1280px) {
+    img {
+        width: 600px;
+    }
+
+    .hg-font {
+        font-size: 2.5rem;
     }
 }
